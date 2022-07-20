@@ -9,13 +9,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/EkaterinaZi/goit-js-hw-08.git"
+    "url": "git+https://ekaterinazi.github.io/goit-js-hw-08/"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/EkaterinaZi/goit-js-hw-08.git/issues"
+    "url": "https://ekaterinazi.github.io/goit-js-hw-08/issues"
   },
   "dependencies": {
     "modern-normalize": "^1.1.0",
