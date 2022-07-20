@@ -1,5 +1,5 @@
 {
-  "name": "parcel-project-template",
+  "name": "goit-js-hw-08",
   "version": "2.0.0",
   "description": "",
   "homepage": "https://github.com/EkaterinaZi/goit-js-hw-08.git",
@@ -9,15 +9,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://ekaterinazi.github.io/goit-js-hw-08/"
+    "url": "git+https://github.com/EkaterinaZi/goit-js-hw-08.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://ekaterinazi.github.io/goit-js-hw-08/issues"
+    "url": "https://github.com/EkaterinaZi/goit-js-hw-08.git/issues"
   },
   "dependencies": {
+    "@vimeo/player": "^2.17.1",
     "modern-normalize": "^1.1.0",
     "simplelightbox": "^2.10.3"
   },
