@@ -20,15 +20,19 @@ function onSubmitedForm (e){
     e.currentTarget.reset();
     console.log(localStorage.getItem(STORAGE_KEY));
     localStorage.removeItem(STORAGE_KEY);
-    
-}
+    }
 
-function populateForm(e){
+function populateForm(){
     const savedStorage = localStorage.getItem(STORAGE_KEY)
+    
     if(savedStorage){
         const savedForm = JSON.parse(savedStorage);
-       ////////як вставити масив в інпут
-    
-    }
-   
+        console.log(savedForm)
+        form.elements.email.value = savedForm.email || "";
+        form.elements.message.value = savedForm.message || "";  
 }
+    }
+
+
+   
+
