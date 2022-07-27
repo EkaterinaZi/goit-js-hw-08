@@ -2,17 +2,19 @@ import trottle from 'lodash.throttle';
 
 const form = document.querySelector('form');
 const STORAGE_KEY = 'feedback-form-state';
-const formData = {};
+//const formData = {};
+populateForm();
 
 form.addEventListener('submit', onSubmitedForm)
 form.addEventListener('input', trottle(
 e =>{
-    formData[e.target.name] = e.target.value
-    console.log(formData)
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(formData))
+    let completedForm = localStorage.getItem(STORAGE_KEY);
+    completedForm = completedForm ? JSON.parse(completedForm) : {};
+    completedForm[e.target.name] = e.target.value
+    console.log(completedForm)
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(completedForm))
 }), 500)
 
-populateForm();
 
 
 function onSubmitedForm (e){
@@ -28,11 +30,10 @@ function populateForm(){
     if(savedStorage){
         const savedForm = JSON.parse(savedStorage);
         console.log(savedForm)
-        form.elements.email.value = savedForm.email || "";
-        form.elements.message.value = savedForm.message || "";  
-}
+        Object.entries(savedForm).forEach(([name, value]) => {
+            filterForm.elements[name].value = value; })
     }
-
+}
 
    
 
