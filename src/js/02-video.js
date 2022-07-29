@@ -12,4 +12,6 @@ player.on('timeupdate', trottle(playTime, 1000)
 function playTime({seconds}){   
     localStorage.setItem("videoplayer-current-time",seconds);
 };
-player.setCurrentTime(localStorage.getItem("videoplayer-current-time"))
+const storage = localStorage.getItem("videoplayer-current-time");
+if(storage){
+player.setCurrentTime(storage)};

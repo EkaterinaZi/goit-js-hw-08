@@ -31,7 +31,8 @@ function populateForm(){
         const savedForm = JSON.parse(savedStorage);
         console.log(savedForm)
         Object.entries(savedForm).forEach(([name, value]) => {
-            filterForm.elements[name].value = value; })
+            form.elements[name].value = value; })
+           
     }
 }
 
